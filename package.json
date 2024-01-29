@@ -1,0 +1,75 @@
+{
+  "name": "your-module-name",
+  "version": "1.0.0",
+  "description": "A Foundry Module Template",
+  "main": "index.js",
+  "author": {
+    "name": "YourName",
+    "email": "Your@Email.com"
+  },
+  "url": "https://www.github.com/YourName/YourRepoURL",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/YourName/YourRepoURL"
+  },
+  "maintainers": [
+    {
+      "name": "YourName",
+      "email": "Your@Email.com"
+    }
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "gulp build",
+    "build:watch": "gulp watch",
+    "devexport": "gulp devexport",
+    "link-project": "gulp link",
+    "clean": "gulp clean",
+    "clean:link": "gulp link --clean",
+    "lint": "eslint --ext .js,.cjs,.mjs .",
+    "lint:fix": "eslint --ext .js,.cjs,.mjs --fix .",
+    "format": "prettier --write \"./**/*.(js|cjs|mjs|json|yml|scss)\"",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:watch": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --watch",
+    "test:ci": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --ci --reporters=default --reporters=jest-junit",
+    "postinstall": "husky install",
+    "changelog": "generate-changelog -u YOUR_REPO_URL"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/stream": "^3.0.0",
+    "@typhonjs-fvtt/eslint-config-foundry.js": "^0.8.0",
+    "cross-env": "^7.0.3",
+    "del": "^7.1.0",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jest": "^27.4.2",
+    "eslint-plugin-prettier": "^5.0.0",
+    "fs-extra": "^11.1.1",
+    "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-zip": "^6.0.0",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-junit": "^16.0.0",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
+    "rollup": "^2.79.1",
+    "rollup-plugin-copy": "^3.5.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "yargs": "^17.7.2"
+  },
+  "lint-staged": {
+    "*.(js|cjs|mjs)": "eslint --fix",
+    "*.(json|yml|scss)": "prettier --write"
+  },
+  "dependencies": {
+    "eslint-plugin-jsdoc": "^46.9.1",
+    "typescript": "^5.3.3"
+  }
+}

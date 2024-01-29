@@ -1,0 +1,13 @@
+{
+  "your-module-name": {
+    "settings": {
+      "your-option-name": {
+        "name": "Your option name",
+        "hint": "Your option description"
+      }
+    },
+    "my-popup-form": {
+      "sometext": "Some text"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "your-module-name",
+  "title": "Your module name",
+  "description": "Your module description",
+  "url": "https://github.com/You/your-module-name",
+  "bugs": "https://github.com/You/your-module-name/issues",
+  "changelog": "https://github.com/You/your-module-name/releases",
+  "manifest": "https://github.com/You/your-module-name/releases/latest/download/module.json",
+  "download": "https://github.com/You/your-module-name/releases/latest/download/module.zip",
+  "license": "https://github.com/You/your-module-name/raw/main/LICENSE.md",
+  "readme": "https://github.com/You/your-module-name/raw/main/README.md",
+  "flags": {
+    "allowBugReporter": true
+  },
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Spanish",
+      "path": "lang/es.json"
+    }
+  ],
+  "media": [
+    {
+      "type": "cover",
+      "url": ""
+    }
+  ],
+  "authors": [
+    {
+      "name": "YourName",
+      "email": "YourEmail",
+      "url": "YourUrl"
+    }
+  ],
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
+  "esmodules": [
+    "module/your-module-name.js"
+  ],
+  "styles": [
+    "styles/your-module-name.css"
+  ]
+}
