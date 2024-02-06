@@ -1,4 +1,7 @@
 /* eslint-disable no-undef */
+
+import { addOneOrTwo } from "./core";
+
 // @ts-ignore
 export class MyPopupWindow extends FormApplication {
   constructor(overrides) {
@@ -11,6 +14,7 @@ export class MyPopupWindow extends FormApplication {
     return mergeObject(super.getData(options), {
       // @ts-ignore
       myoption: game.settings.get("your-module-name", "yourOptionName"),
+      mynumber: addOneOrTwo(1),
       overrides: this.overrides,
     });
   }
