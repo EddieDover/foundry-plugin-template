@@ -18,6 +18,7 @@ import rollupStream from "@rollup/stream";
 
 import rollupConfig from "./rollup.config.mjs";
 import zip from "gulp-zip";
+import rename from "gulp-rename";
 
 /********************/
 /*  CONFIGURATION   */
@@ -145,6 +146,24 @@ export async function clean() {
     await fs.remove(`${distDirectory}/${filePath}`);
   }
 }
+
+/********************/
+/*      PACKAGE      */
+/********************/
+
+// Define a task to zip the contents of the /dist folder into a subfolder
+gulp.task("zip-dist", () => {
+  return gulp
+    .src("dist/**/*")
+    .pipe(
+      rename((ipath) => {
+        // Rename to put the contents inside 'subsubsub' folder
+        path.dirname = `${packageId}/${ipath.dirname}`;
+      }),
+    )
+    .pipe(zip(`${packageId}.zip`))
+    .pipe(gulp.dest("."));
+});
 
 /********************/
 /*       LINK       */
