@@ -35,12 +35,14 @@
     "test:watch": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --watch",
     "test:ci": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --ci --reporters=default --reporters=jest-junit",
     "postinstall": "husky install",
-    "changelog": "generate-changelog -u YOUR_REPO_URL"
+    "release": "commit-and-tag-version",
+    "release:dry": "commit-and-tag-version --dry"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.1",
     "@rollup/stream": "^3.0.0",
     "@typhonjs-fvtt/eslint-config-foundry.js": "^0.8.0",
+    "commit-and-tag-version": "^12.2.0",
     "cross-env": "^7.0.3",
     "del": "^7.1.0",
     "eslint": "^8.49.0",
@@ -71,5 +73,11 @@
   "dependencies": {
     "eslint-plugin-jsdoc": "^46.9.1",
     "typescript": "^5.3.3"
+  },
+  "commit-and-tag-version": {
+    "skip": {
+      "commit": true,
+      "tag": true
+    }
   }
 }
