@@ -2,6 +2,10 @@
 
 This is a foundry plugin template that I use. I assume absolutely no responsibility for anything that goes wrong if you decide to use it yourself.
 
+# TypeScript:
+
+If you wish to use TypeScript, please see the [TypeScript](https://github.com/eddiedover/foundry-plugin-template/tree/typescript) branch.
+
 # Before Use:
 1. Look for instances of `your-module-name`, `YourName`, `Your@Email.com`, `YourEmail` and replace them.
 2. Make sure you have edited any relevant urls in the following files: `package.json`, `git-conventional-commits.yml`, `FUNDING.yml`. (There may be others, just keep an eye out)
