@@ -4,12 +4,16 @@ import { addOneOrTwo } from "./core";
 
 // @ts-ignore
 export class MyPopupWindow extends FormApplication {
-  constructor(overrides) {
+  overrides: {
+    onexit?: () => void;
+  };
+
+  constructor(incoming_overrides?: {}) {
     super();
-    this.overrides = overrides || {};
+    this.overrides = incoming_overrides || {};
   }
 
-  getData(options) {
+  getData(options:{}) {
     // @ts-ignore
     return mergeObject(super.getData(options), {
       // @ts-ignore
@@ -46,7 +50,7 @@ export class MyPopupWindow extends FormApplication {
     this.refresh();
   }
 
-  activateListeners(html) {
+  activateListeners(html:any) {
     super.activateListeners(html);
     // @ts-ignore
     $('button[name="submit"]', html).click(this.doSubmit.bind(this));

@@ -4,7 +4,7 @@ import { addOneOrTwo } from "../src/module/app/core";
 
 describe("An example test", () => {
   // eslint-disable-next-line no-undef
-  global.game = {
+  (global as any).game = {
     user: {
       isGM: false,
     },
@@ -19,7 +19,7 @@ describe("An example test", () => {
     expect(result).toBe(2);
     result = addOneOrTwo(number);
     // eslint-disable-next-line no-undef
-    global.game.user.isGM = true;
+    (global as any).game.user.isGM = true;
     result = addOneOrTwo(number);
     expect(result).toBe(3);
   });

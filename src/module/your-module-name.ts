@@ -2,7 +2,7 @@
 import { MyPopupWindow } from "./app/popup-window";
 import { registerSettings } from "./app/settings";
 
-let currentPopupWindow = null;
+let currentPopupWindow: any = null;
 
 /**
  * Checks if the current environment is ForgeVTT
