@@ -12,7 +12,6 @@ If you wish to use JavaScript, please see the [main](https://github.com/eddiedov
 
 
 # Features
-- Uses JSDoc/eslint to give basic typing & intellisense support.
 - Has working example of ES6 unit tests that deal with foundry specific elements.
 - SCSS styling.
 - An example of basic localization.
@@ -32,7 +31,7 @@ If you wish to use JavaScript, please see the [main](https://github.com/eddiedov
 
 # Cutting Releases For Your Project
 
-1. When preparing for a new release, use `npm run release` to activate [`commit-and-tag-version`](https://www.npmjs.com/package/commit-and-tag-version#configuration). This package will automatically bump the version number in both the `package.json` and `/src/module.json` files, as well as automatically populate CHANGELOG.md with a new entries for the upcoming release version. The changelog is updated using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) and the version numbers are updated using [semantic versioning](https://semver.org/). Use `npm run release:dry` to
+1. When preparing for a new release, use `npm run release` to activate [`commit-and-tag-version`](https://www.npmjs.com/package/commit-and-tag-version#configuration). This package will automatically bump the version number in both the `package.json` and `/src/module.json` files, as well as automatically populate CHANGELOG.md with a new entries for the upcoming release version. The changelog is updated using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) and the version numbers are updated using [semantic versioning](https://semver.org/). Use `npm run release:dry` to see a preview of the run in the console.
 2. To cut a new release, make a tag for your main branch with the syntax `vX.Y.Z` then push it to origin. This will start a Github Action which will produce a build, that will then be attached to a release of that same version number. **NOTE:** You can make this automatic by editing the package.json file and changing the `skip` booleans on `commit` and `tag` to true. Then when you use `npm run release` it will also automatically sign, create the tag, and commit it. All you'll need to do then is push it. _(Disclaimer: I don't do this so it may not work 100%. Feel free to update this documentation if you desire.)_
 
 # Generating a package for testers
