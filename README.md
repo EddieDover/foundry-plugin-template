@@ -1,6 +1,10 @@
-# Foundry Plugin Template
+# Foundry Plugin Template - TypeScript Version
 
 This is a foundry plugin template that I use. I assume absolutely no responsibility for anything that goes wrong if you decide to use it yourself.
+
+# JavaScript:
+
+If you wish to use JavaScript, please see the [main](https://github.com/eddiedover/foundry-plugin-template/) branch.
 
 # Before Use:
 1. Look for instances of `your-module-name`, `YourName`, `Your@Email.com`, `YourEmail` and replace them.
