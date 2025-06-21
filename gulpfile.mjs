@@ -6,7 +6,8 @@
 import fs from "fs-extra";
 import gulp from "gulp";
 import { deleteAsync } from "del";
-import sass from "gulp-dart-sass";
+import gulpSass from "gulp-sass";
+import * as dartSass from "sass";
 import sourcemaps from "gulp-sourcemaps";
 import path from "node:path";
 import buffer from "vinyl-buffer";
@@ -31,6 +32,7 @@ const stylesDirectory = `${sourceDirectory}/styles`;
 const stylesExtension = "scss";
 const sourceFileExtension = "js";
 const staticFiles = ["assets", "fonts", "lang", "packs", "templates", "module.json"];
+const sass = gulpSass(dartSass);
 
 //*******************/
 /*      BUILD       */
