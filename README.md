@@ -1,6 +1,6 @@
-# Foundry Plugin Template
+# Foundry V13 Plugin Template
 
-This is a foundry plugin template that I use. I assume absolutely no responsibility for anything that goes wrong if you decide to use it yourself.
+This is a foundry v13 plugin template that I use. I assume absolutely no responsibility for anything that goes wrong if you decide to use it yourself.
 
 # TypeScript:
 
